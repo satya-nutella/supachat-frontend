@@ -15,7 +15,7 @@ const UserList = ({ activeUsers }) => {
       <Table>
         <tbody>
           {activeUsers.map(({ uid, username }) => (
-            <tr key={uid}>
+            uid !== currentUser.uid && <tr key={uid}>
               <td>
                 <Link
                   style={{
